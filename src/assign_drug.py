@@ -2,10 +2,15 @@
 #print filename[-5]
 
 def assign_drug(filename):
-    if filename[-5] == '1':
+    if int(filename[-5]) % 2 == 1:
         return 'tylenol'
-    elif filename[-5] == '4':
+    else:
         return 'placebo'
+
+import sys
+filename = sys.argv[1]  # for using in script
+print assign_drug(filename)
+#print filename
     
 assert assign_drug('inflammation_1.dat') == 'tylenol'
 assert assign_drug('inflammation_3.dat') == 'tylenol'
