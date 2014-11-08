@@ -2,6 +2,7 @@
 #print filename[-5]
 
 def assign_drug(filename):
+    ''' assigns a drug to a filename'''
     if int(filename[-5]) % 2 == 1:
         return 'tylenol'
     else:
